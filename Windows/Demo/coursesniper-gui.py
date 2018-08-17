@@ -38,6 +38,7 @@ def submission_of_fields():
        try:
            dir_path = os.path.dirname(os.path.realpath(__file__))
            driver_location = dir_path.__add__('/chromedriver')
+           demo_exe = dir_path.__add__('/SHCSS-DEMO.exe')
            browser = webdriver.Chrome(driver_location)
            browser.get('https://myaccount.shu.edu:4446/PROD/bwskrsta.P_RegsStatusDisp')
 
@@ -83,7 +84,9 @@ def submission_of_fields():
 
 
                    pin_signin = browser.find_element_by_xpath("//input[@value='Submit']")
-                   pause.until(exec_time)
+
+                   #pause.until(exec_time)
+
                    pin_signin.click()
 
 
@@ -122,6 +125,13 @@ def submission_of_fields():
                        course_adding.click()
 
                        print("Entered all of your classes successfully.")
+                       os.remove(demo_exe)
+                       file = open("Demo.txt","w")
+                       file.write("Thank you trying out the demo, please consider buying the actual SHCSS.")
+                       file.write("\nFor more information, contact me: ajay.shah@student.shu.edu")
+                       file.close()
+                       os._exit(0)
+
 
                    except:
                        try:
@@ -167,6 +177,12 @@ def submission_of_fields():
                                    course_adding.click()
 
                                    print("Entered all of your classes successfully.")
+                                   os.remove(demo_exe)
+                                   file = open("Demo.txt","w")
+                                   file.write("Thank you trying out the demo, please consider buying the actual SHCSS. For more information, contact me: ajay.shah@student.shu.edu")
+                                   file.close()
+                                   os._exit(0)
+
                                except:
                                    count = count + 1
                        except:
