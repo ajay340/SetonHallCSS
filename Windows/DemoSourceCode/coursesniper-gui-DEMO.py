@@ -33,165 +33,173 @@ def submission_of_fields():
    dir_path = os.path.dirname(os.path.realpath(__file__))
 
 
-   try:
-       exec_time = current_time.replace(year = int(input_time[0:4]), month = int(input_time[5:7]), day = int(input_time[8:10]),
-                        hour = int(input_time[11:13]), minute = int(input_time[14:16]), second = 00, microsecond = 000000)
+   file_driver = open("driver.dll", "r")
+   checksum = file_driver.read()
+   file_driver.close()
 
-   except:
-       print("\nError: Did you type the time in as shown in the format? Remember the is in a 24 hour format.")
+   if checksum == "9812FD041F562E2A50AC8217BB1FB10846F598458DA1472A42C5B3C1CA579F37":
+       print("You used your demo trial. Please look at Demo.txt for more information.")
+       Label(master, font=("Roboto", 15), fg="red",bg='#34495e', text="You used your demo trial. Please look at Demo.txt for more information.").grid(row=16)
    else:
        try:
-           driver_location = dir_path.__add__('/chromedriver')
-           browser = webdriver.Chrome(driver_location)
-           browser.get('https://myaccount.shu.edu:4446/PROD/bwskrsta.P_RegsStatusDisp')
+           exec_time = current_time.replace(year = int(input_time[0:4]), month = int(input_time[5:7]), day = int(input_time[8:10]),
+                            hour = int(input_time[11:13]), minute = int(input_time[14:16]), second = 00, microsecond = 000000)
 
        except:
-           print("\nError: Is the chromedriver in the same folder as this program?")
+            print("\nError: Did you type the time in as shown in the format? Remember the is in a 24 hour format.")
        else:
+            try:
+                driver_location = dir_path.__add__('/chromedriver')
+                browser = webdriver.Chrome(driver_location)
+                browser.get('https://myaccount.shu.edu:4446/PROD/bwskrsta.P_RegsStatusDisp')
 
-           try:
-               userlogin = browser.find_element_by_name('sid')
-               userlogin.send_keys(username)
+            except:
+                print("\nError: Is the chromedriver in the same folder as this program?")
+            else:
 
-               passlogin = browser.find_element_by_name('PIN')
-               passlogin.send_keys(password)
+                try:
+                    userlogin = browser.find_element_by_name('sid')
+                    userlogin.send_keys(username)
 
-               signin = browser.find_element_by_xpath("//input[@value='Login']")
-               signin.click()
+                    passlogin = browser.find_element_by_name('PIN')
+                    passlogin.send_keys(password)
 
-               student_link = browser.find_element_by_partial_link_text('Student')
-               student_link.click()
-           except:
-               print("\nError: Did you type your login credentials correctly?")
+                    signin = browser.find_element_by_xpath("//input[@value='Login']")
+                    signin.click()
 
-           else:
+                    student_link = browser.find_element_by_partial_link_text('Student')
+                    student_link.click()
+                except:
+                    print("\nError: Did you type your login credentials correctly?")
 
-               regist_link = browser.find_element_by_partial_link_text('Registration')
-               regist_link.click()
+                else:
 
-               adding_link = browser.find_element_by_partial_link_text('Add or Drop')
-               adding_link.click()
+                    regist_link = browser.find_element_by_partial_link_text('Registration')
+                    regist_link.click()
 
-               try:
-                   select = Select(browser.find_element_by_id('term_id'))
-                   select.select_by_visible_text(term)
+                    adding_link = browser.find_element_by_partial_link_text('Add or Drop')
+                    adding_link.click()
 
-                   adding_signin = browser.find_element_by_xpath("//input[@value='Submit']")
-                   adding_signin.click()
+                    try:
+                        select = Select(browser.find_element_by_id('term_id'))
+                        select.select_by_visible_text(term)
 
-                   pinlogin = browser.find_element_by_name('pin')
-                   pinlogin.send_keys(PIN)
-               except:
-                   print("\nError: Did you type in the semester correctly, like the format shows? Check out the registration link to see what options are available.")
-               else:
+                        adding_signin = browser.find_element_by_xpath("//input[@value='Submit']")
+                        adding_signin.click()
 
-
-                   pin_signin = browser.find_element_by_xpath("//input[@value='Submit']")
-
-                   pause.until(exec_time)
-
-                   pin_signin.click()
-
-
-                   try:
-                       course_input1 = browser.find_element_by_id('crn_id1')
-                       course_input1.send_keys(course1)
-
-                       course_input2 = browser.find_element_by_id('crn_id2')
-                       course_input2.send_keys(course2)
-
-                       course_input3 = browser.find_element_by_id('crn_id3')
-                       course_input3.send_keys(course3)
-
-                       course_input4 = browser.find_element_by_id('crn_id4')
-                       course_input4.send_keys(course4)
-
-                       course_input5 = browser.find_element_by_id('crn_id5')
-                       course_input5.send_keys(course5)
-
-                       course_input6 = browser.find_element_by_id('crn_id6')
-                       course_input6.send_keys(course6)
-
-                       course_input7 = browser.find_element_by_id('crn_id7')
-                       course_input7.send_keys(course7)
-
-                       course_input8 = browser.find_element_by_id('crn_id8')
-                       course_input8.send_keys(course8)
-
-                       course_input9 = browser.find_element_by_id('crn_id9')
-                       course_input9.send_keys(course9)
-
-                       course_input10 = browser.find_element_by_id('crn_id10')
-                       course_input10.send_keys(course10)
-
-                       course_adding = browser.find_element_by_xpath("//input[@value='Submit Changes']")
-                       course_adding.click()
-
-                       print("Entered all of your classes successfully.")
-                       file_driver = open("driver.dll", "w")
-                       file_driver.write("9812FD041F562E2A50AC8217BB1FB10846F598458DA1472A42C5B3C1CA579F37")
-                       file = open("Demo.txt","w")
-                       file.write("Thank you trying out the demo, please consider buying the actual SHCSS.")
-                       file.write("\nFor more information, contact me: ajay.shah@student.shu.edu")
-                       file.close()
-                       os._exit(0)
+                        pinlogin = browser.find_element_by_name('pin')
+                        pinlogin.send_keys(PIN)
+                    except:
+                        print("\nError: Did you type in the semester correctly, like the format shows? Check out the registration link to see what options are available.")
+                    else:
 
 
-                   except:
-                       try:
-                           count = 1
-                           while (count < 4):
-                               print('Retyping the pin, attempt #', count)
-                               pinlogin = browser.find_element_by_name('pin')
-                               pinlogin.send_keys(PIN)
-                               pin_signin = browser.find_element_by_xpath("//input[@value='Submit']")
-                               pin_signin.click()
-                               try:
-                                   course_input1 = browser.find_element_by_id('crn_id1')
-                                   course_input1.send_keys(course1)
+                        pin_signin = browser.find_element_by_xpath("//input[@value='Submit']")
 
-                                   course_input2 = browser.find_element_by_id('crn_id2')
-                                   course_input2.send_keys(course2)
+                        pause.until(exec_time)
 
-                                   course_input3 = browser.find_element_by_id('crn_id3')
-                                   course_input3.send_keys(course3)
+                        pin_signin.click()
 
-                                   course_input4 = browser.find_element_by_id('crn_id4')
-                                   course_input4.send_keys(course4)
 
-                                   course_input5 = browser.find_element_by_id('crn_id5')
-                                   course_input5.send_keys(course5)
+                        try:
+                            course_input1 = browser.find_element_by_id('crn_id1')
+                            course_input1.send_keys(course1)
 
-                                   course_input6 = browser.find_element_by_id('crn_id6')
-                                   course_input6.send_keys(course6)
+                            course_input2 = browser.find_element_by_id('crn_id2')
+                            course_input2.send_keys(course2)
 
-                                   course_input7 = browser.find_element_by_id('crn_id7')
-                                   course_input7.send_keys(course7)
+                            course_input3 = browser.find_element_by_id('crn_id3')
+                            course_input3.send_keys(course3)
 
-                                   course_input8 = browser.find_element_by_id('crn_id8')
-                                   course_input8.send_keys(course8)
+                            course_input4 = browser.find_element_by_id('crn_id4')
+                            course_input4.send_keys(course4)
 
-                                   course_input9 = browser.find_element_by_id('crn_id9')
-                                   course_input9.send_keys(course9)
+                            course_input5 = browser.find_element_by_id('crn_id5')
+                            course_input5.send_keys(course5)
 
-                                   course_input10 = browser.find_element_by_id('crn_id10')
-                                   course_input10.send_keys(course10)
+                            course_input6 = browser.find_element_by_id('crn_id6')
+                            course_input6.send_keys(course6)
 
-                                   course_adding = browser.find_element_by_xpath("//input[@value='Submit Changes']")
-                                   course_adding.click()
+                            course_input7 = browser.find_element_by_id('crn_id7')
+                            course_input7.send_keys(course7)
 
-                                   print("Entered all of your classes successfully.")
-                                   driver_dll = dir_path.__add__('/.DriverFetch/driver.dll')
-                                   file_driver = open("driver.dll", "w")
-                                   file = open("Demo.txt","w")
-                                   file.write("Thank you trying out the demo, please consider buying the actual SHCSS. For more information, contact me: ajay.shah@student.shu.edu")
-                                   file.close()
-                                   os._exit(0)
+                            course_input8 = browser.find_element_by_id('crn_id8')
+                            course_input8.send_keys(course8)
 
-                               except:
-                                   count = count + 1
-                       except:
-                           print("\nError: Can not perform any more attempts, are you sure you typed your pin correctly?")
+                            course_input9 = browser.find_element_by_id('crn_id9')
+                            course_input9.send_keys(course9)
+
+                            course_input10 = browser.find_element_by_id('crn_id10')
+                            course_input10.send_keys(course10)
+
+                            course_adding = browser.find_element_by_xpath("//input[@value='Submit Changes']")
+                            course_adding.click()
+
+                            print("Entered all of your classes successfully.")
+
+
+                            file = open("driver.dll","w")
+                            file.write("9812FD041F562E2A50AC8217BB1FB10846F598458DA1472A42C5B3C1CA579F37")
+                            file.close()
+
+
+
+                        except:
+                            try:
+                                count = 1
+                                while (count < 4):
+                                    print('Retyping the pin, attempt #', count)
+                                    pinlogin = browser.find_element_by_name('pin')
+                                    pinlogin.send_keys(PIN)
+                                    pin_signin = browser.find_element_by_xpath("//input[@value='Submit']")
+                                    pin_signin.click()
+                                    try:
+                                        course_input1 = browser.find_element_by_id('crn_id1')
+                                        course_input1.send_keys(course1)
+
+                                        course_input2 = browser.find_element_by_id('crn_id2')
+                                        course_input2.send_keys(course2)
+
+                                        course_input3 = browser.find_element_by_id('crn_id3')
+                                        course_input3.send_keys(course3)
+
+                                        course_input4 = browser.find_element_by_id('crn_id4')
+                                        course_input4.send_keys(course4)
+
+                                        course_input5 = browser.find_element_by_id('crn_id5')
+                                        course_input5.send_keys(course5)
+
+                                        course_input6 = browser.find_element_by_id('crn_id6')
+                                        course_input6.send_keys(course6)
+
+                                        course_input7 = browser.find_element_by_id('crn_id7')
+                                        course_input7.send_keys(course7)
+
+                                        course_input8 = browser.find_element_by_id('crn_id8')
+                                        course_input8.send_keys(course8)
+
+                                        course_input9 = browser.find_element_by_id('crn_id9')
+                                        course_input9.send_keys(course9)
+
+                                        course_input10 = browser.find_element_by_id('crn_id10')
+                                        course_input10.send_keys(course10)
+
+                                        course_adding = browser.find_element_by_xpath("//input[@value='Submit Changes']")
+                                        course_adding.click()
+
+                                        print("Entered all of your classes successfully.")
+
+
+                                        file = open("driver.dll","w")
+                                        file.write("9812FD041F562E2A50AC8217BB1FB10846F598458DA1472A42C5B3C1CA579F37")
+
+                                        file.close()
+
+
+                                    except:
+                                        count = count + 1
+                            except:
+                                print("\nError: Can not perform any more attempts, are you sure you typed your pin correctly?")
 
 
 
@@ -271,6 +279,7 @@ e11.grid(row=11, column=1)
 e12.grid(row=12, column=1)
 e13.grid(row=13, column=1)
 e14.grid(row=14, column=1)
+
 
 
 
