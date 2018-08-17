@@ -85,7 +85,7 @@ def submission_of_fields():
 
                    pin_signin = browser.find_element_by_xpath("//input[@value='Submit']")
 
-                   #pause.until(exec_time)
+                   pause.until(exec_time)
 
                    pin_signin.click()
 
