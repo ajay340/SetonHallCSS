@@ -1,7 +1,7 @@
 Thank you for using Seton Hall Course Scheduling Sniper (SHCSS).
 
 
-You will want to make sure you have the SHCSS.exe, chromdriver.exe, and seha-lg.ico
+You will want to make sure you have the SHCSS.exe, chromdriver.exe, driver.dll, and seha-lg.ico
 in the same folder.
 
 Make sure you have google chrome installed.
