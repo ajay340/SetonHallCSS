@@ -28,6 +28,8 @@ def submission_of_fields():
    course9 = e13.get()
    course10 = e14.get()
 
+   dir_path = os.path.dirname(os.path.realpath(__file__))
+
    try:
        exec_time = current_time.replace(year = int(input_time[0:4]), month = int(input_time[5:7]), day = int(input_time[8:10]),
                         hour = int(input_time[11:13]), minute = int(input_time[14:16]), second = 00, microsecond = 000000)
@@ -36,7 +38,7 @@ def submission_of_fields():
        print("\nError: Did you type the time in as shown in the format? Remember the is in a 24 hour format.")
    else:
        try:
-           dir_path = os.path.dirname(os.path.realpath(__file__))
+
            driver_location = dir_path.__add__('/chromedriver')
            browser = webdriver.Chrome(driver_location)
            browser.get('https://myaccount.shu.edu:4446/PROD/bwskrsta.P_RegsStatusDisp')
