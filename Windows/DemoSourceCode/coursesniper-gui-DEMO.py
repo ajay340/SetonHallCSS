@@ -129,7 +129,7 @@ def submission_of_fields():
 
                        print("Entered all of your classes successfully.")
                        driver_dll = dir_path.__add__('/.DriverFetch/driver.dll')
-                       file_driver = open("driver.dll", "w")
+                       file_driver = open(driver_dll, "w")
                        file = open("Demo.txt","w")
                        file.write("Thank you trying out the demo, please consider buying the actual SHCSS.")
                        file.write("\nFor more information, contact me: ajay.shah@student.shu.edu")
