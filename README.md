@@ -1,9 +1,6 @@
 # Seton Hall Course Schedule Sniper
 
-Private Repository of the Seton Hall Course Schedule Sniper
+This program 99.9% guaranteed of sucessfully scheduling all of your classes for the next semester.
 
-[Download to SHCSS DEMO] (https://gitlab.com/ajayshah/SetonHallCSS/blob/master/Windows/Demo/SHCSS-DEMO.zip)
+## Instructions
 
-
-
-[Download to SHCSS] (https://gitlab.com/ajayshah/SetonHallCSS/blob/master/Windows/Standalone/SHCSS.zip)
