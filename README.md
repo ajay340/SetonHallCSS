@@ -11,7 +11,7 @@ in the same folder.
 Also, make sure you have [Google Chrome](https://www.google.com/chrome/) installed.
 
 ## Information you need before registering
-In addition, you want all of your information to registration ready. 
+In addition, you want all of your information to registration ready.
 
 
 1.) Registration Semester (Like Fall 2019) - You will be able to find out which semesters are available
