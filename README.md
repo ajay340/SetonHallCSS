@@ -3,6 +3,9 @@
 This program is a 99.9% guarantee of sucessfully scheduling all of your courses for the upcoming semester.
 
 To obtain the program or for support email me: ajay.shah@student.shu.edu
+<p align="center">
+    <img src="https://raw.githubusercontent.com/ajay340/SetonHallCSS/master/Windows/screenshots/Capture.PNG?token=AJtaD_EZJVkFWXSl0b_Kts4QcV0S6g5fks5brr3YwA%3D%3D">
+ </p>   
 
 ## Note
 You will receive a zip file for the program. You need to extract the zip file and make sure these files are in the same folder: SHCSS.exe, chromdriver.exe, driver.dll, and seha-lg.ico
