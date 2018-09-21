@@ -1,4 +1,4 @@
-# SetonHallCSS
+# Seton Hall Course Schedule Sniper
 
 Private Repository of the Seton Hall Course Schedule Sniper
 
