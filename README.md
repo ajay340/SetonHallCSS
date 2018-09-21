@@ -35,6 +35,4 @@ Now enter in the information in the GUI and click submit. Google Chrome will ope
 
 If you receive any errors look at the command prompt as it will tell you what may have been causing them.
 
-For support contact me at ajay.shah@student.shu.edu
-
 Video Demo coming soon...
