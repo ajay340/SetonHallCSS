@@ -4,7 +4,7 @@ This program is a 99.9% guarantee of sucessfully scheduling all of your courses 
 
 To obtain the program or for support email me: ajay.shah@student.shu.edu
 <p align="center">
-    <img src="https://raw.githubusercontent.com/ajay340/SetonHallCSS/master/Windows/screenshots/Capture.PNG?token=AJtaD_EZJVkFWXSl0b_Kts4QcV0S6g5fks5brr3YwA%3D%3D">
+    <img src="https://i.imgur.com/KQb3Ztd.png">
  </p>   
 
 ## Note
