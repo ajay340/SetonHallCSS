@@ -38,4 +38,5 @@ Now enter in the information in the GUI and click submit. Google Chrome will ope
 
 If you receive any errors look at the command prompt as it will tell you what may have been causing them.
 
-Video Demo coming soon...
+## Video Demo
+<iframe width="1104" height="480" src="https://www.youtube.com/embed/bubaP4So93g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
