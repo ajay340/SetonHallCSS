@@ -8,7 +8,7 @@ To obtain the program or for support email me: ajay.shah@student.shu.edu
  </p>  
  
 ## Video Demo
-<iframe width="1004" height="480" src="https://www.youtube.com/embed/bubaP4So93g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="904" height="480" src="https://www.youtube.com/embed/bubaP4So93g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Note
 You will receive a zip file for the program. You need to extract the zip file and make sure these files are in the same folder: SHCSS.exe, chromdriver.exe, driver.dll, and seha-lg.ico
