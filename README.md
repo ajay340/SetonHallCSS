@@ -9,6 +9,8 @@ To obtain the program or for support email me: ajay.shah@student.shu.edu
  
 ## Video Demo
 <iframe width="804" height="480" src="https://www.youtube.com/embed/bubaP4So93g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+In this video example, my course schedule timing was at 10/28 at 9:34pm for the Fall semester. So I entered in all of my information for Piratenet, my pin, the semester I'm registering for, and in this examples all of my course numbers are "x."
+After clicking submit, Google Chrome opens up, enters my Piratenet login, and enters my pin. It waits until 9:34pm to submit my pin and enter all of my classes.
 
 ## Note
 You will receive a zip file for the program. You need to extract the zip file and make sure these files are in the same folder: SHCSS.exe, chromdriver.exe, driver.dll, and seha-lg.ico
