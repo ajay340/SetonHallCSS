@@ -3,6 +3,8 @@
 This program is a 99.9% guarantee of sucessfully scheduling all of your courses for the upcoming semester.
 
 To obtain the program or for support email me: ajay.shah@student.shu.edu
+
+[Download Link](https://github.com/ajay340/SetonHallCSS/releases)
 <p align="center">
     <img src="https://i.imgur.com/KQb3Ztd.png">
  </p>  
