@@ -1,0 +1,5 @@
+pause
+selenium
+datetime
+getpass
+tkinter
