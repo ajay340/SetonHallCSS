@@ -13,8 +13,7 @@ In this video example, my course schedule timing was at 10/28 at 9:34pm for the 
 After clicking submit, Google Chrome opens up, enters my Piratenet login, and enters my pin. It waits until 9:34pm to submit my pin and enter all of my classes.
 
 ## Note
-You will receive a zip file for the program. You need to extract the zip file and make sure these files are in the same folder: SHCSS.exe, chromdriver.exe, driver.dll, and seha-lg.ico
-in the same folder.
+You will receive a zip file for the program. You need to extract the zip file and make sure these files are in the same folder: chromdriver.exe and another folder called lib which should contain the chromedriver.
 
 Also, make sure you have [Google Chrome](https://www.google.com/chrome/) installed.
 
