@@ -1,8 +1,6 @@
 # Seton Hall Course Schedule Sniper
 
-This program is a 99.9% guarantee of sucessfully scheduling all of your courses for the upcoming semester.
-
-To obtain the program or for support email me: ajay.shah@student.shu.edu
+This program is that tries to sucessfully scheduling all of your courses for the upcoming semester within a split second.
 
 [Download Link](https://github.com/ajay340/SetonHallCSS/releases)
 <p align="center">
@@ -15,9 +13,8 @@ In this video example, my course schedule timing was at 10/28 at 9:34pm for the 
 After clicking submit, Google Chrome opens up, enters my Piratenet login, and enters my pin. It waits until 9:34pm to submit my pin and enter all of my classes.
 
 ## Note
-You will receive a zip file for the program. You need to extract the zip file and make sure these files are in the same folder: chromdriver.exe and another folder called lib which should contain the chromedriver.
 
-Also, make sure you have [Google Chrome](https://www.google.com/chrome/) installed.
+Make sure you have [Google Chrome](https://www.google.com/chrome/) installed.
 
 ## Information you need before registering
 In addition, you want all of your information to registration ready.
@@ -44,4 +41,6 @@ Now enter in the information in the GUI and click submit. Google Chrome will ope
 
 If you receive any errors look at the command prompt as it will tell you what may have been causing them.
 
+## Contributions
 
+Feel free to make pull requests.

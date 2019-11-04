@@ -1,9 +1,9 @@
 from tkinter import *
 from datetime import datetime
 import time
-import pause
 import sys
 import os
+import pause
 import getpass
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
@@ -180,6 +180,7 @@ def clear_fields():
    e13.delete(0,END)
    e14.delete(0,END)
 
+
 current_time = (datetime.now())
 
 
@@ -209,21 +210,21 @@ Label(master, font=("Roboto", 15), fg="white",bg='#34495e', text="Course Number 
 Label(master, font=("Roboto", 15), fg="white",bg='#34495e', text="Course Number #9:").grid(row=13)
 Label(master, font=("Roboto", 15), fg="white",bg='#34495e', text="Course Number #10:").grid(row=14)
 
-e0 = Entry(master)
-e1 = Entry(master)
-e2 = Entry(master)
-e3 = Entry(master, show="*")
-e4 = Entry(master, show="*")
-e5 = Entry(master)
-e6 = Entry(master)
-e7 = Entry(master)
-e8 = Entry(master)
-e9 = Entry(master)
-e10 = Entry(master)
-e11 = Entry(master)
-e12 = Entry(master)
-e13 = Entry(master)
-e14 = Entry(master)
+e0:Entry = Entry(master)
+e1:Entry = Entry(master)
+e2:Entry = Entry(master)
+e3:Entry = Entry(master, show="*")
+e4:Entry = Entry(master, show="*")
+e5:Entry = Entry(master)
+e6:Entry = Entry(master)
+e7:Entry = Entry(master)
+e8:Entry = Entry(master)
+e9:Entry = Entry(master)
+e10:Entry = Entry(master)
+e11:Entry = Entry(master)
+e12:Entry = Entry(master)
+e13:Entry = Entry(master)
+e14:Entry = Entry(master)
 
 e0.grid(row=0, column=1)
 e1.grid(row=1, column=1)
@@ -241,7 +242,7 @@ e12.grid(row=12, column=1)
 e13.grid(row=13, column=1)
 e14.grid(row=14, column=1)
 
-submit_button = Button(master, text=' Submit ', command=submission_of_fields).grid(row=15, column=1)
-clear_button = Button(master, text=' Clear ', command=clear_fields).grid(row=16, column=1)
+Button(master, text=' Submit ', command=submission_of_fields).grid(row=15, column=1)
+Button(master, text=' Clear ', command=clear_fields).grid(row=16, column=1)
 
 mainloop()
